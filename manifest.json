@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Youtube playback control",
+  "name": "Caliper - track events",
   "version": "0.1.3",
   "description": "Control all youtube tabs from any tab any window.",
   "browser_action": {
@@ -9,15 +9,17 @@
       "38": "assets/icon@2x.png"
     },
     "default_popup": "views/popup/index.html",
-    "default_title": "Youtube Tabs"
+    "default_title": "Caliber Tabs"
 	},
   "permissions": [
-    "tabs"
+    "tabs",
+    "identity.email"
   ],
   "content_scripts": [
     {
       "matches": [
-        "*://www.youtube.com/*"
+        "http://*/*",
+        "https://*/*"
       ],
       "js": ["content.js"]
     }
