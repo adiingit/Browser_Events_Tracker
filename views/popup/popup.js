@@ -3,7 +3,7 @@ var queryInfo = { url: matchUrl },
     event = {};
 chrome.tabs.query(queryInfo,function(tabs) {
     //var cl = $('#content-list');
-
+    console.log("popup "+Date());
     tabs.forEach(function(tab) {
         //console.log(tab);
         //var imageClass = tab.audible ? 'pauseImage' : 'playImage';
